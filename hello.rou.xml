@@ -1,8 +1,18 @@
 <routes>
-    <vType accel="1.0" decel="5.0" id="Truck" length="8.0" maxSpeed="10.0" sigma="0.0" breadth="4.0" />
+    <vType accel="1.0" decel="5.0" id="Truck" length="8.0" maxSpeed="8.0" sigma="0.0" breadth="4.0" />
     <route id="route0" edges="1to2 out"/>
     <vehicle depart="1" id="veh0" route="route0" type="Truck" />
-    <vType accel = "1.5" decel = "3.0" id="car" length = "2.0" maxSpeed="8.0" sigma = "2.0" />
-    <route id = "route1" edges="4to5 out2" />
-    <vehicle depart= "1.2" id ="veh1" route="route1" type="car" />
-</routes>
+    <vType accel= "1.5" decel= "3.0" id="car" length= "4.0" maxSpeed="6.0" sigma= "0.3" />
+    <route id= "route1" edges="4to5 out2" />
+    <vehicle depart= "1.2" id="veh1" route="route1" type="car" />
+    
+</routes> 
+<!-- <routes>
+	<vTypeDistribution id="typedist1" >
+		<vType id="Mobil" accel="0.8" decel="4.5" sigma="0.5" maxSpeed="10" color="1,0,0"/>
+		<vType id="Bus" accel="1.2" decel="6.0" sigma="0.5" maxSpeed="10" />
+	</vTypeDistribution>
+	<flow id="flow0" type="typedist1" begin="0" period="3">
+		<route edges="1to2 out" />
+	</flow>
+</routes> --> 
