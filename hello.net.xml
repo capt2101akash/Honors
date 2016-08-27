@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on Sat Aug 27 00:02:14 2016 by SUMO netconvert Version 0.19.0
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo-sim.org/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <node-files value="hello.nod.xml"/>
+        <edge-files value="hello.edg.xml"/>
+    </input>
+
+    <output>
+        <output-file value="hello.net.xml"/>
+    </output>
+
+</configuration>
+-->
+
+<net version="0.13" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo-sim.org/xsd/net_file.xsd">
+
+    <location netOffset="250.00,201.00" convBoundary="0.00,0.00,501.00,326.00" origBoundary="-250.00,-201.00,251.00,125.00" projParameter="!"/>
+
+    <edge id=":2_0" function="internal">
+        <lane id=":2_0_0" index="0" speed="13.90" length="0.10" shape="500.00,199.35 500.00,199.35"/>
+    </edge>
+    <edge id=":5_0" function="internal">
+        <lane id=":5_0_0" index="0" speed="13.90" length="0.10" shape="373.35,1.00 373.35,1.00"/>
+    </edge>
+
+    <edge id="1to2" from="1" to="2" priority="-1">
+        <lane id="1to2_0" index="0" speed="13.90" length="500.00" shape="0.00,199.35 500.00,199.35"/>
+    </edge>
+    <edge id="4to5" from="4" to="5" priority="-1">
+        <lane id="4to5_0" index="0" speed="13.90" length="325.00" shape="373.35,326.00 373.35,1.00"/>
+    </edge>
+    <edge id="out" from="2" to="3" priority="-1">
+        <lane id="out_0" index="0" speed="13.90" length="1.00" shape="500.00,199.35 501.00,199.35"/>
+    </edge>
+    <edge id="out2" from="5" to="6" priority="-1">
+        <lane id="out2_0" index="0" speed="13.90" length="1.00" shape="373.35,1.00 373.35,0.00"/>
+    </edge>
+
+    <junction id="1" type="unregulated" x="0.00" y="201.00" incLanes="" intLanes="" shape="-0.00,200.95 -0.00,197.75"/>
+    <junction id="2" type="priority" x="500.00" y="201.00" incLanes="1to2_0" intLanes=":2_0_0" shape="500.00,200.95 500.00,197.75 500.00,200.95">
+        <request index="0" response="0" foes="0" cont="0"/>
+    </junction>
+    <junction id="3" type="unregulated" x="501.00" y="201.00" incLanes="out_0" intLanes="" shape="501.00,197.75 501.00,200.95"/>
+    <junction id="4" type="unregulated" x="375.00" y="326.00" incLanes="" intLanes="" shape="374.95,326.00 371.75,326.00"/>
+    <junction id="5" type="priority" x="375.00" y="1.00" incLanes="4to5_0" intLanes=":5_0_0" shape="371.75,1.00 374.95,1.00 371.75,1.00">
+        <request index="0" response="0" foes="0" cont="0"/>
+    </junction>
+    <junction id="6" type="unregulated" x="375.00" y="0.00" incLanes="out2_0" intLanes="" shape="371.75,0.00 374.95,0.00"/>
+
+    <connection from="1to2" to="out" fromLane="0" toLane="0" via=":2_0_0" dir="s" state="M"/>
+    <connection from="4to5" to="out2" fromLane="0" toLane="0" via=":5_0_0" dir="s" state="M"/>
+
+    <connection from=":2_0" to="out" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":5_0" to="out2" fromLane="0" toLane="0" dir="s" state="M"/>
+
+</net>
