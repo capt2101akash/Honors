@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <connections xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xsi:noNamespaceSchemaLocation="http://sumo.sf.net/xsd/connections_file.xsd">
- <connections from="1to2" to="out" fromLane="0" toLane="1" />
+ <connections from="1to2" to="out" fromLane="0" toLane="0" />
 </connections>

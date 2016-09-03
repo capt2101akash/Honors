@@ -1,11 +1,23 @@
 <routes>
-    <vType accel="1.0" decel="5.0" id="Truck" length="8.0" maxSpeed="8.0" sigma="0.0" breadth="4.0" />
+	
+    <vType accel="2.9" decel="5.0" id="Truck" length="8.0" maxSpeed="8.0" sigma="0.0" breadth="8.0" guiShape="bus"/>
     <route id="route0" edges="1to2 out"/>
-    <vehicle depart="1" id="veh0" route="route0" type="Truck" />
-    <vType accel= "1.5" decel= "3.0" id="car" length= "4.0" maxSpeed="6.0" sigma= "0.3" />
-    <route id= "route1" edges="4to5 out2" />
-    <vehicle depart= "1.2" id="veh1" route="route1" type="car" />
+    <vehicle departLane= "0" depart="1" id="veh0" route="route0" type="Truck" arrivalLane= "2">
+        <stop lane="1to2_0" endPos="365" duration= "50" />
+    </vehicle>
     
+    <vType accel= "1.4" id="car2" length="8.0" maxSpeed= "3.0" />
+    <route id= "route1" edges="4to5 out2" />
+    <vehicle accel="1" depart="1" id="veh3" route="route1" type="car2" departLane="1"/>
+	
+    <vType accel= "0.6" decel= "3.0" id="car" length= "8.0" maxSpeed="3.0" sigma= "0.3" />
+    <vehicle depart= "1.2" id="veh1" route="route1" type="car" departLane="0">
+	   <stop lane="4to5_0" endPos="135" duration= "50" />
+    </vehicle>
+	
+    <vType accel="1.5" id="car1" length="8.0" maxSpeed="8.0" />
+    <vehicle depart="1.4" id="veh2" route="route1" type="car1"/>
+
 </routes> 
 <!-- <routes>
 	<vTypeDistribution id="typedist1" >

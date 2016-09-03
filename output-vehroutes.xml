@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on Monday 29 August 2016 10:17:37 PM IST by SUMO gui Version 0.19.0
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo-sim.org/xsd/sumo-gui.exeConfiguration.xsd">
+
+    <input>
+        <net-file value="/home/theprototype/Honors/hello.net.xml"/>
+        <route-files value="/home/theprototype/Honors/hello.rou.xml"/>
+    </input>
+
+    <output>
+        <netstate-dump value="/home/theprototype/Honors/hello.rou.xml.sumo.tr"/>
+        <summary-output value="output-emissions.xml"/>
+        <tripinfo-output value="output-tripinfos.xml"/>
+        <vehroute-output value="output-vehroutes.xml"/>
+        <save-state.prefix value="state"/>
+    </output>
+
+    <time>
+        <begin value="0"/>
+        <end value="1000"/>
+    </time>
+
+    <processing>
+        <route-steps value="-1"/>
+        <time-to-teleport value="-1"/>
+    </processing>
+
+    <report>
+        <print-options value="false"/>
+    </report>
+
+    <random_number>
+        <seed value="23423"/>
+    </random_number>
+
+</configuration>
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo-sim.org/xsd/routes_file.xsd">
+    <vehicle id="veh1" type="car" depart="1.00" arrival="60.00">
+        <route edges="4to5 out2"/>
+    </vehicle>
+
+    <vehicle id="veh0" type="Truck" depart="1.00" arrival="98.00">
+        <route edges="1to2 out"/>
+    </vehicle>
+
+</routes>

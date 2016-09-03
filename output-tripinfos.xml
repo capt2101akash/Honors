@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on Monday 29 August 2016 10:17:37 PM IST by SUMO gui Version 0.19.0
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo-sim.org/xsd/sumo-gui.exeConfiguration.xsd">
+
+    <input>
+        <net-file value="/home/theprototype/Honors/hello.net.xml"/>
+        <route-files value="/home/theprototype/Honors/hello.rou.xml"/>
+    </input>
+
+    <output>
+        <netstate-dump value="/home/theprototype/Honors/hello.rou.xml.sumo.tr"/>
+        <summary-output value="output-emissions.xml"/>
+        <tripinfo-output value="output-tripinfos.xml"/>
+        <vehroute-output value="output-vehroutes.xml"/>
+        <save-state.prefix value="state"/>
+    </output>
+
+    <time>
+        <begin value="0"/>
+        <end value="1000"/>
+    </time>
+
+    <processing>
+        <route-steps value="-1"/>
+        <time-to-teleport value="-1"/>
+    </processing>
+
+    <report>
+        <print-options value="false"/>
+    </report>
+
+    <random_number>
+        <seed value="23423"/>
+    </random_number>
+
+</configuration>
+-->
+
+<tripinfos>
+    <tripinfo id="veh1" depart="1.00" departLane="4to5_0" departPos="4.10" departSpeed="0.00" departDelay="-0.20" arrival="60.00" arrivalLane="out2_0" arrivalPos="0.20" arrivalSpeed="5.94" duration="59.00" routeLength="319.60" waitSteps="0" rerouteNo="0" devices="vehroute_veh1 tripinfo_veh1" vType="car" vaporized=""/>
+    <tripinfo id="veh0" depart="1.00" departLane="1to2_0" departPos="8.10" departSpeed="0.00" departDelay="0.00" arrival="98.00" arrivalLane="out_0" arrivalPos="248.50" arrivalSpeed="8.00" duration="97.00" routeLength="738.90" waitSteps="0" rerouteNo="0" devices="vehroute_veh0 tripinfo_veh0" vType="Truck" vaporized=""/>
+</tripinfos>
